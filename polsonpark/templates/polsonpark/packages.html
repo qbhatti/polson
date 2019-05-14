@@ -1,0 +1,59 @@
+{% extends "polsonpark/base.html" %}
+{% load static %}
+
+{% block headLinks %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/packages.css' %}" />
+{% endblock headLinks %}
+		
+        
+{% block body %}
+	<div id="mySidenav" class="sidenav">
+  <a href="#" id="About">About</a>
+  <a href="contactus.html" id="Contact">Contact</a>
+  <a href="areaguide.html" id="Location">Location</a>
+  <a href="rooms.html" id="Room">Rooms</a>
+</div>
+	<div class="hero-image">
+	<img src="{% static 'polsonpark/images/PP_images/motal/package.jpg' %}" alt="Decorative image">
+  <div class="hero-text">
+    <h1>Discover the Location</h1>
+	  </div>
+	</div>
+		<div id="content-wrapper">
+			<div class="row">
+				<table class="tablepak">
+					<thead>
+						<tr>
+							<th>Package</th>
+							<th>Rates</th>
+					 </tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>SPECIAL ROOM FOR YOU</td><td>from $99 / night</td></tr>
+						<tr>
+						<td>FAMILY SPAIOUS ROOM</td><td>from $299 / night</td></tr>
+						<tr>
+						<td>DOUBLE ROOM STANDARD</td><td>from $159 / night</td></tr>
+						<tr>
+						<td>LUXURY ROOM</td><td>from $129 / night</td></tr>
+						<tr>
+						<td>ROOM WITH ONE BEDROOM</td><td>from $79 / night</td></tr>
+						<tr>
+						<td>SENIOR DISCOUNTS</td><td>ASK FOR DETAILS</td></tr>
+						<tr>
+						<td>EXTENDED STAY DISCOUNTS</td><td>ASK FOR DETAILS</td></tr>
+						
+					</tbody>
+
+</table>
+			
+	
+</div>
+		
+		
+	
+	</div>
+{% endblock body %}
+
+			

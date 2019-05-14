@@ -1,0 +1,70 @@
+{% extends "polsonpark/base.html" %}
+{% load static %}
+
+{% block headLinks %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/areaguide.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/contact.css' %}" />
+{% endblock headLinks %}
+   
+{% block body %}
+	<div id="mySidenav" class="sidenav">
+  <a href="#" id="About">About</a>
+  <a href="{% url 'polsonpark:contactus-page' %}" id="Contact">Contact</a>
+  <a href="{% url 'polsonpark:areaguide-page' %}" id="Location">Location</a>
+  <a href="rooms.html" id="Room">Rooms</a>
+</div>
+	<div class="hero-image">
+	<img src="{% static 'polsonpark/images/PP_images/motal/con3.jpg' %}" alt="Decorative image">
+  <div class="hero-text">
+    <h1>Ask Away!</h1>
+	  </div>
+	</div>
+		<div id="content-wrapper">
+			<h3>Contact us for more inquiries</h3>
+			<div class="row">
+			<div class="colm-50">
+				
+				<br>
+				 <label for="fname"> First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" size="40">
+           
+				<br>
+				<br>
+				<label for="Email"> Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Email" size="40">
+	
+
+
+
+
+
+				
+
+				
+			</div>
+			<div class="colm-50 equal">
+				 <label for="lname"> Last Name</label>
+            <input type="text" id="lname" name="email" placeholder="Last Name" size="40" >
+				<br>
+				<br>
+				 <label for="phoneno">Phone No</label>
+            <input type="text" id="lname" name="email" placeholder="Phone No" size="40" >
+			</div>
+				<label for="phoneno">We will try to reach back to you as soon as possible.</label>
+			  <textarea></textarea>	
+				<div class="colm-50">
+				<button type="submit" name="submitbutton" value="submitform" class="btn">Submit Form</button>
+				</div>
+				<div class="colm-50">
+				<button type="reset" name="resetbutton" value="resetform" class="btn">Clear Form</button></div>
+				
+
+				
+			</div>
+						
+</div>
+{% endblock body %}
+
+			
+			
+			

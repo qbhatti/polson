@@ -1,0 +1,32 @@
+table.tablepak {
+ 
+  border: 2px solid #1B183E;
+  background-color: #A9CDD6;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.tablepak td, table.tablepak th {
+  border: 1px solid #67576E;
+  padding: 4px 4px;
+}
+table.tablepak tbody td {
+  font-size: 18px;
+  color: #1B183E;
+}
+table.tablepak tr:nth-child(even) {
+  background: #FFFFFF;
+}
+table.tablepak thead {
+  background: #1B183E;
+}
+table.tablepak thead th {
+  font-size: 14px;
+  font-weight: normal;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #67576E;
+}
+table.tablepak thead th:first-child {
+  border-left: none;
+}

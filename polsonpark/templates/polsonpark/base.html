@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<title>Polsan Park Motel</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Fullscreen Slit Slider with CSS3 and jQuery" />
+		<meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay" />
+		<meta name="author" content="Mansoora Muabshra" />
+		<link rel="shortcut icon" href="{% static 'polsonpark/images/favicon.ico' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/demo.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/custom.css' %}" />
+		{% block headLinks %}
+			
+		{% endblock headLinks %}
+
+		<script type="text/javascript" src="{% static 'polsonpark/js/modernizr.custom.79639.js' %}"></script>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{% static 'polsonpark/styles/styleNoJs.css' %}" />
+		</noscript>
+		{% block headScripts %}
+			
+		{% endblock headScripts %}
+	    </head>
+
+    <body>
+    	<img src="{% static 'polsonpark/images/PP_images/small_logo2.jpg' %}" alt="polson park logo" class="logo">
+
+		{% include "polsonpark/navbar.html" %}
+
+        {% block body %}
+        {% endblock body %}
+
+
+        {% include "polsonpark/footer.html" %}
+
+    	{% block bodyScripts %}
+    		
+    	{% endblock bodyScripts %}
+    </body>
+</html>

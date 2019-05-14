@@ -1,0 +1,13 @@
+{% extends "polsonpark/base.html" %}
+
+{% block body %}
+<div id="content-wrapper">
+	<ul>
+		<li>Room Number: {{ room.room_number }}</li>
+		<li>Status: {{ room.room_status }}</li>
+		{% if room.notes %}
+			<li>Notes: {{ room.notes }}</li>
+		{% endif %}
+	</ul>
+</div>
+{% endblock body %}
