@@ -1,12 +1,15 @@
-{% extends "polsonpark/base.html" %}
+{% extends "hotel/base.html" %}
 
 {% block body %}
-	<div id="content-wrapper">
+	
 		<h3>List of Rooms:</h3>
 		<ul>
 			{% for r in rooms %}
-				<li><a href="{% url 'hotel:room-details-page' r.room_number %}">{{ r }}</a></li>
+				<li><a href="{% url 'hotel:room-details-page' r.pk %}">{{ r }}</a></li>
 			{% endfor %}
 		</ul>
-	</div>
+
+		<div> 
+			<a href="{% url 'hotel:new-room-page' %}"><button class="btn btn-primary btn-sm">Add Room</button></a>
+		</div>
 {% endblock body %}

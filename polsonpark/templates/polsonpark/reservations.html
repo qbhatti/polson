@@ -38,33 +38,22 @@
             <button class="btn" onclick="document.getElementById('id01').style.display='block'">Check Availability</button>
       <!-- The Modal (contains the Sign Up form) -->
 <div id="id01" class="modal">
-    <form class="modal-content animate">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
-  
+    <form class="modal-content animate" action="{% url 'hotel:rooms-available' %}">
    <div class="hope">
        <h2>Check Availability</h2>
        <br>
         <label for="Check-in">Check-In</label>
-     <input type="date" name="bday" id="bday">
+     <input type="date" name="Check-in" id="bday">
 
       <label for="Check-out">Check-Out</label>
-      <input type="date" name="bday" id="bday">
+      <input type="date" name="Check-out" id="bday">
 
-      <label for="No-of-Guest">No of Guests</label>
-      <select>
-    <option value="choose">Number of Guests</option>
-    <option value="BC">1 Adult</option>
-    <option value="AB">2 Adults</option>
-    <option value="SK">Family</option>
- </select>
-
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px; padding: 20px;"> Continue to  Checkout
-      </label>
+      <label for="No-of-Guest">Number of Guests </label>
+      <input id="No-of-Guest" type="number" value="0" min="1" max="10"/>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn">Cancel</button>
-        <button type="submit" class="btn">Reserve Now!</button>
+        <button type="submit" class="btn">Check Availability</button>
       </div>
         </div>
      
@@ -113,7 +102,7 @@
             </div>
           </div>
 
-          <div class="col-50">
+          <!-- <div class="col-50">
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
             <div class="icon-reservation">
@@ -144,7 +133,7 @@
         <label>
           <input type="checkbox" checked="checked" name="recheck"> I have read the terms and conditions
         </label>
-        <input type="submit" value="Continue to checkout" class="btn">
+        <input type="submit" value="Continue to checkout" class="btn"> -->
      
     </div>
   </div>

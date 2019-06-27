@@ -1,0 +1,21 @@
+{% extends "hotel/base.html" %}
+
+{% block body %}
+	{% if error %}
+		<h3 style="font-color:red">{{ error }}</h3>
+
+	{% else %}
+
+		<h3>List of Available Rooms:</h3>
+		<ul>
+			{% for r in rooms %}
+				<li><a href="{% url 'hotel:room-details-page' r.pk %}">{{ r.room_number }}</a></li>
+			{% endfor %}
+		</ul>
+
+	{% endif %}
+
+	
+
+		
+{% endblock body %}

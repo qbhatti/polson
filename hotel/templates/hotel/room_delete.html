@@ -1,0 +1,13 @@
+{% extends "hotel/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+	<form action='.' method="POST"> 
+		{% csrf_token %}
+
+		<h3>Do you want to delete the Room # {{ room.room_number }}?</h3>
+		
+		<button class="btn btn-danger btn-sm" type="submit">Yes</button>
+		<a class="btn btn-link" role="button" href="../">Cancel</a>
+	</form>
+{% endblock body %}

@@ -23,4 +23,7 @@ urlpatterns = [
 
 	#default
     path('admin/', admin.site.urls),
+
+    #all auth path
+    path('accounts/', include('allauth.urls')),
 ]

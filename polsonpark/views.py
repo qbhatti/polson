@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.template import RequestContext
 
 # Create your views here.
 
 def index_view(request):
+	print(request.user.username)
 	return render(request, 'polsonpark/index.html', {})
 
 def reservation_view(request):

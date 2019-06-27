@@ -1,13 +1,18 @@
-{% extends "polsonpark/base.html" %}
+{% extends "hotel/base.html" %}
 
 {% block body %}
-<div id="content-wrapper">
+
 	<ul>
 		<li>Room Number: {{ room.room_number }}</li>
 		<li>Status: {{ room.room_status }}</li>
+		<li>Rate (CAD/Night): {{ room.rate }}</li>
 		{% if room.notes %}
 			<li>Notes: {{ room.notes }}</li>
 		{% endif %}
 	</ul>
-</div>
+
+	<div> 
+		<a href="{% url "hotel:room-update-page" room.id %}"><button class="btn btn-primary btn-sm">Edit</button></a>
+		<a href="{% url "hotel:room-delete-page" room.id %}"><button class="btn btn-link btn-sm">Delete</button></a>
+	</div>
 {% endblock body %}

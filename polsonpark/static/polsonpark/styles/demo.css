@@ -603,10 +603,7 @@ margin-left: auto;
   background-color: #fefefe;
   border: 1px solid #888;
   width: 100%; /* Could be more or less, depending on screen size */
-	padding-right: 50px;
-	padding-left: 50px;
-	padding-top: 50px;
-	padding-bottom: 50px;
+  padding: 20px;
 }
 
 /* Style the horizontal ruler */
@@ -615,17 +612,19 @@ margin-left: auto;
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 35px;
- 
-  color: #1b183e;
+  right: 15px;
+  top: 45px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ff0050;
 }
+
 
 .close:hover,
 .close:focus {
   color: #1b183e;
   cursor: pointer;
+  background-color: 'red';
 }
 
 /* Clear floats */
